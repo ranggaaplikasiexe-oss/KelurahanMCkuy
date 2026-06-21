@@ -21,8 +21,12 @@ class SuratController extends Controller
      * Show the form for creating a new resource.
      */
     public function create()
-    {
-        //
+   {
+        // 1. Ambil semua data penduduk untuk pilihan dropdown Warga Pemohon
+        $penduduk = Penduduk::all(); 
+
+        // 2. Return ke folder view 'surat' dan file 'create.blade.php'
+        return view('surat.create', compact('penduduk'));
     }
 
     /**

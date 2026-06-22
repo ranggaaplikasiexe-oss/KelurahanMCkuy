@@ -265,7 +265,13 @@
                 <!--begin::Menu Footer-->
                 <li class="user-footer">
                   <a href="#" class="btn btn-outline-secondary">Profile</a>
-                  <a href="#" class="btn btn-outline-danger float-end">Sign out</a>
+                  <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                      @csrf
+                      <button type="submit" class="btn btn-outline-danger float-end">
+                          <i class="fas fa-sign-out-alt me-1"></i> Keluar Aplikasi
+                      </button>
+                  </form>
+
                 </li>
                 <!--end::Menu Footer-->
               </ul>
